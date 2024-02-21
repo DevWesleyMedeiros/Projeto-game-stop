@@ -1,0 +1,9 @@
+Resolver problemas:
+
+Do responsivo
+Validação dos inputs
+
+
+Criar:
+
+button finalizar o programa, quando o esgotar
