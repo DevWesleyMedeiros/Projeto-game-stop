@@ -1,0 +1,7 @@
+Categories of words:
+
+Name, Animal, City, Country, Fruit, Brand (any), Soccer team, Movie, Furniture or appliance, Vehicle (any)
+
+GAME RULES:
+
+Time out in 10 minutes after the timer starting to you to complete the filds.

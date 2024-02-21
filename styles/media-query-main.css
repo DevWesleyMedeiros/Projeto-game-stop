@@ -1,0 +1,32 @@
+@media screen and (max-width: 670px) {
+  .letter-sorted-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.5rem 2rem;
+  }
+  .wrapper {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+  .word {
+    width: 100%;
+    display: block;
+  }
+  .container-filds-words {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 1rem;
+    grid-gap: 0.5rem;
+  }
+  .word{
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+    .container-filds-words {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5rem;
+    }
+}

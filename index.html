@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>	
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/media-query-main.css">
+    <title>Jogo de Stop</title>
+  </head>
+  <body>
+    <div class="letter-sorted-box">
+        <h1 id="letter">
+          <!-- Onde virá a letra que será sorteada -->
+        </h1>
+        <div class="timer-container">
+            <div class="stop-timer">
+                <button id="pause" class="bg-red-950 text-violet-200 border border-red-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group w-28 h-12">Pausar
+                    <span class="bg-red-400 shadow-red-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]">
+                    </span>
+                </button>
+            </div>
+            <div class="timer-box">
+                00:00:00
+              <!-- Onde ficará o cronômetro -->
+            </div>
+            <div class="reset-timer">
+                <button id="reset" class="bg-red-950 text-violet-200 border border-red-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group w-28 h-12">Resetar
+                    <span class="bg-red-400 shadow-red-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]">
+                    </span>
+                </button>
+            </div>
+        </div>
+      </div>
+    <div class="wrapper">
+      <div class="container-filds-words">
+        <div class="word">
+          <label for="Male">Nome própio masculino:</label>
+          <div class="categorie">
+            <input type="checkbox" name="check-box-male" id="male" disabled/>
+            <input type="text" id="Male" required disabled/>
+          </div>
+          <div class="text">Digite um valor válido para nome</div>
+        </div>
+        <div class="word">
+            <label for="Female">Nome própio femenino:</label>
+            <div class="categorie">
+              <input type="checkbox" name="check-box-female" id="female" disabled/>
+              <input type="text" id="Female" required disabled/>
+            </div>
+            <div class="text">Digite um valor válido para nome</div>
+          </div>
+        <div class="word">
+            <label for="Profession">Profissão:</label>
+            <div class="categorie">
+              <input type="checkbox" name="check-box-profession" id="profession" disabled/>
+              <input type="text" id="Profession" disabled/>
+            </div>
+            <div class="text">Digite um valor válido para Nome</div>
+          </div>
+        <div class="word">
+          <label for="Animal">Nome de animal:</label>
+          <div class="categorie">
+            <input type="checkbox" name="check-box-animal" id="animal" disabled/>
+            <input type="text" id="Animal" disabled/>
+          </div>
+          <div class="text">Digite um valor válido para Nome</div>
+        </div>
+        <div class="word">
+          <label for="City">Cidade:</label>
+          <div class="categorie">
+            <input type="checkbox" name="check-box-city" id="city" disabled/>
+            <input type="text" id="City" disabled/>
+          </div>
+          <div class="text">Digite um valor válido para Nome</div>
+        </div>
+        <div class="word">
+          <label for="Country">País:</label>
+          <div class="categorie">
+            <input type="checkbox" name="check-box-country" id="country" disabled/>
+            <input type="text" id="Country" disabled/>
+          </div>
+          <div class="text">Digite um valor válido para Nome</div>
+        </div>
+        <div class="word">
+            <label for="Food">Nome de comida:</label>
+            <div class="categorie">
+              <input type="checkbox" name="check-box-food" id="Food" disabled/>
+              <input type="text" id="Food" disabled/>
+            </div>
+            <div class="text">Digite um valor válido para Nome</div>
+          </div>
+        <div class="word">
+          <label for="Fruit">Nome de fruta:</label>
+          <div class="categorie">
+            <input type="checkbox" name="check-box-fruit" id="fruit" disabled/>
+            <input type="text" id="Fruit" disabled/>
+          </div>
+          <div class="text">Digite um valor válido para Nome</div>
+        </div>
+        <div class="word">
+          <label for="Brand">Marca (qualquer):</label>
+          <div class="categorie">
+            <input type="checkbox" name="check-box-brand" id="brand" disabled/>
+            <input type="text" id="Brand" disabled/>
+          </div>
+          <div class="text">Digite um valor válido para Nome</div>
+        </div>
+        <div class="word">
+          <label for="Soccer-team">Time de futebol:</label>
+          <div class="categorie">
+            <input
+              type="checkbox"
+              name="check-box-soccer-team"
+              id="soccer-team" disabled/>
+            <input type="text" id="Soccer-team" disabled/>
+          </div>
+          <div class="text">Digite um valor válido para Nome</div>
+        </div>
+        <div class="word">
+          <label for="Movie">Nome de filme:</label>
+          <div class="categorie">
+            <input type="checkbox" name="check-box-movie" id="movie" disabled/>
+            <input type="text" id="Movie" disabled/>
+          </div>
+          <div class="text">Digite um valor válido para Nome</div>
+        </div>
+        <div class="word">
+            <label for="Serie">Nome de série:</label>
+            <div class="categorie">
+              <input type="checkbox" name="check-box-serie" id="serie" disabled/>
+              <input type="text" id="Serie" disabled/>
+            </div>
+            <div class="text">Digite um valor válido para Nome</div>
+          </div>
+        <div class="word">
+          <label for="Furniture-apliancee"
+            >Móvel ou eletrodoméstico:</label
+          >
+          <div class="categorie">
+            <input
+              type="checkbox"
+              name="check-box-furniture-apliancee"
+              id="furniture-apliancee" disabled/>
+            <input type="text" id="Furniture-apliancee" disabled/>
+          </div>
+          <div class="text">Digite um valor válido para Nome</div>
+        </div>
+        <div class="word">
+          <label for="Vehicle">Marca ou Nome de veículo:</label>
+          <div class="categorie">
+            <input type="checkbox" name="check-box-veihicle" id="veihicle" disabled/>
+            <input type="text" id="Vehicle" disabled/>
+          </div>
+          <div class="text">Digite um valor válido para Nome</div>
+        </div>
+        <div class="word">
+            <label for="Sport">Um esporte:</label>
+            <div class="categorie">
+              <input
+                type="checkbox"
+                name="check-box-sport"
+                id="soccer-team" disabled/>
+              <input type="text" id="Sport" disabled/>
+            </div>
+            <div class="text">Digite um valor válido para Nome</div>
+      </div>
+    </div>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
