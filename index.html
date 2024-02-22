@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>	
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>	
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/media-query-main.css">
+    <link rel="stylesheet" href="styles/final-screen.css">
     <title>Jogo de Stop</title>
   </head>
   <body>
@@ -34,6 +37,7 @@
       </div>
     <div class="wrapper">
       <div class="container-filds-words">
+
         <div class="word">
           <label for="Male">Nome própio masculino:</label>
           <div class="categorie">
@@ -41,7 +45,13 @@
             <input type="text" id="Male" required disabled/>
           </div>
           <div class="text">Digite um valor válido para nome</div>
+          <lord-icon
+            src="https://cdn.lordicon.com/spjdafms.json"
+            trigger="hover"
+            style="width:150px;height:250px;">
+        </lord-icon>
         </div>
+
         <div class="word">
             <label for="Female">Nome própio femenino:</label>
             <div class="categorie">
@@ -49,7 +59,13 @@
               <input type="text" id="Female" required disabled/>
             </div>
             <div class="text">Digite um valor válido para nome</div>
+            <lord-icon
+            src="https://cdn.lordicon.com/zbblnakr.json"
+            trigger="hover"
+            style="width:150px;height:250px">
+            </lord-icon>
           </div>
+
         <div class="word">
             <label for="Profession">Profissão:</label>
             <div class="categorie">
@@ -57,7 +73,13 @@
               <input type="text" id="Profession" disabled/>
             </div>
             <div class="text">Digite um valor válido para Nome</div>
+            <lord-icon
+                src="https://cdn.lordicon.com/iuqcjilb.json"
+                trigger="hover"
+                style="width:250px;height:250px">
+            </lord-icon>
           </div>
+
         <div class="word">
           <label for="Animal">Nome de animal:</label>
           <div class="categorie">
@@ -66,6 +88,7 @@
           </div>
           <div class="text">Digite um valor válido para Nome</div>
         </div>
+
         <div class="word">
           <label for="City">Cidade:</label>
           <div class="categorie">
@@ -74,6 +97,7 @@
           </div>
           <div class="text">Digite um valor válido para Nome</div>
         </div>
+
         <div class="word">
           <label for="Country">País:</label>
           <div class="categorie">
@@ -82,22 +106,25 @@
           </div>
           <div class="text">Digite um valor válido para Nome</div>
         </div>
+
         <div class="word">
             <label for="Food">Nome de comida:</label>
             <div class="categorie">
-              <input type="checkbox" name="check-box-food" id="Food" disabled/>
+              <input type="checkbox" name="check-box-food" id="food" disabled/>
               <input type="text" id="Food" disabled/>
             </div>
             <div class="text">Digite um valor válido para Nome</div>
           </div>
+
         <div class="word">
-          <label for="Fruit">Nome de fruta:</label>
-          <div class="categorie">
+            <label for="Fruit">Nome de fruta:</label>
+            <div class="categorie">
             <input type="checkbox" name="check-box-fruit" id="fruit" disabled/>
             <input type="text" id="Fruit" disabled/>
           </div>
           <div class="text">Digite um valor válido para Nome</div>
         </div>
+
         <div class="word">
           <label for="Brand">Marca (qualquer):</label>
           <div class="categorie">
@@ -106,6 +133,7 @@
           </div>
           <div class="text">Digite um valor válido para Nome</div>
         </div>
+
         <div class="word">
           <label for="Soccer-team">Time de futebol:</label>
           <div class="categorie">
@@ -117,6 +145,7 @@
           </div>
           <div class="text">Digite um valor válido para Nome</div>
         </div>
+
         <div class="word">
           <label for="Movie">Nome de filme:</label>
           <div class="categorie">
@@ -125,6 +154,7 @@
           </div>
           <div class="text">Digite um valor válido para Nome</div>
         </div>
+
         <div class="word">
             <label for="Serie">Nome de série:</label>
             <div class="categorie">
@@ -133,6 +163,7 @@
             </div>
             <div class="text">Digite um valor válido para Nome</div>
           </div>
+
         <div class="word">
           <label for="Furniture-apliancee"
             >Móvel ou eletrodoméstico:</label
@@ -146,6 +177,7 @@
           </div>
           <div class="text">Digite um valor válido para Nome</div>
         </div>
+
         <div class="word">
           <label for="Vehicle">Marca ou Nome de veículo:</label>
           <div class="categorie">
@@ -154,6 +186,7 @@
           </div>
           <div class="text">Digite um valor válido para Nome</div>
         </div>
+
         <div class="word">
             <label for="Sport">Um esporte:</label>
             <div class="categorie">

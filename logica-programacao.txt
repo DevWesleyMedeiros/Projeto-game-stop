@@ -1,2 +1,3 @@
 Criar uma lógica para quando o tempo esgotar, ele verificar se todos os campos foram preenchidos e dizer se eu ganhei ou não
 
+Quando o cronômetro chegar a 10 minutos ele deve para e dar uma tela mostrando se todos os campos forma preenchidos

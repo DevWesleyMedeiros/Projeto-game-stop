@@ -34,16 +34,43 @@ ableInputs();
 sortedLetter();
 disabledField();
 setTimeout(() => {
-    timer();
+  timer();
 }, 5500);
 
 function sortedLetter() {
   let alphabetArray = [
-    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "x", "z",
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "y",
+    "x",
+    "z",
   ];
 
   setTimeout(() => {
-    chosenLetter.innerHTML = `Letra sorteada: ${alphabetArray[Math.floor(Math.random() * alphabetArray.length)].toUpperCase()}`;
+    chosenLetter.innerHTML = `Letra sorteada: ${alphabetArray[
+      Math.floor(Math.random() * alphabetArray.length)
+    ].toUpperCase()}`;
   }, 3000);
 }
 
@@ -62,6 +89,7 @@ function disabledField() {
   });
 }
 
+// Timer
 function timer() {
   let millisecondsTime = 0;
   let secondsTime = 0;
@@ -80,11 +108,31 @@ function timer() {
       secondsTime = 0;
       minutesTime++;
     }
+    if (minutesTime === 1) {
+      resetTimer();
 
-    timerBox.innerHTML = `${formatTime(minutesTime)}:${formatTime(secondsTime)}:${formatTime(millisecondsTime / 10)}`;
+      let emptyInputText = false;
+
+      for (const input of inputText) {
+        if (input.value.trim() === "") {
+          emptyInputText = true;
+        }
+      }
+      if (emptyInputText) {
+        let divFullScreen = createFullScreen();
+        document.body.appendChild(divFullScreen);
+        // mostrar a tela de final de jogo aqui
+      } else {
+        alert("Todos os campos foram preenchidos");
+      }
+    }
+
+    timerBox.innerHTML = `${formatTime(minutesTime)}:${formatTime(
+      secondsTime
+    )}:${formatTime(millisecondsTime / 10)}`;
   };
 
-  intervalId = setInterval(updateTimer, 10);
+  intervalId = setInterval(updateTimer, 1);
 
   timerBox.style.visibility = "visible";
 
@@ -97,16 +145,16 @@ function timer() {
   };
 
   buttonPause.addEventListener("click", () => {
-    isPaused = !isPaused; 
+    isPaused = !isPaused;
     if (!isPaused) {
-        intervalId = setInterval(updateTimer, 10);
-    }else{
-        clearInterval(intervalId);
+      intervalId = setInterval(updateTimer, 10);
+    } else {
+      clearInterval(intervalId);
     }
     buttonPause.innerText = isPaused ? "Continuar" : "Pausar";
   });
 
-  buttonReset.addEventListener("click", ()=>{
+  buttonReset.addEventListener("click", () => {
     resetTimer();
     buttonPause.innerText = "Começar";
   });
@@ -130,4 +178,17 @@ function isFullField(index) {
   } else {
     currentDivText.style.visibility = "hidden";
   }
+}
+function createFullScreen() {
+  
+  const divFinalScreen = document.createElement("div");
+  const divMessage = document.createElement("div");
+
+  divFinalScreen.classList.toggle("finalScreen");
+  divMessage.classList.toggle("message");
+  
+  divFinalScreen.appendChild(divMessage)
+  divFinalScreen.style.visibility = "visible";
+
+  return divFinalScreen;
 }
